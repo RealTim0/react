@@ -57,7 +57,7 @@ button:hover{
   cursor:pointer;
 }
 .playbuttons{
-  animation: dropdown 4s  ease-in-out ;
+  animation: dropdown 1s  ease-in;
 }
 
 @keyframes dropdown {

@@ -1,6 +1,7 @@
 import React from "react"
 import Squares from "./Squares"
 import Confetti from "react-confetti"
+import boxicons from "boxicons"
 
 
 export default function Board () {
@@ -61,7 +62,7 @@ if(isWinner){
         <>
             <Confetti />
             <h1>{isWinner} wins the game:)</h1>
-            <p><button className="playbuttons"onClick={handleReset}>Play Again</button></p>
+            <p><button className="playbuttons"onClick={handleReset}><box-icon name='plane-land' type='solid' flip='horizontal' color='#33ba0b' ></box-icon>Play Again<box-icon name='plane-land' type='solid' color='#33ba0b' ></box-icon></button></p>
         </>
     )}
        
@@ -69,7 +70,7 @@ else if(isDraw){
     return(
         <>
             <h1>{drawMessage}</h1>
-            <p><button className="playbuttons"onClick={handleReset}>Play Again</button></p>
+            <p><button className="playbuttons"onClick={handleReset}><box-icon name='plane-land' type='solid' flip='horizontal' color='#33ba0b' ></box-icon>Play Again<box-icon name='plane-land' type='solid' color='#33ba0b' ></box-icon></button></p>
         </>
     )}
 
