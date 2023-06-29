@@ -61,7 +61,7 @@ if(isWinner){
     return( 
         <>
             <Confetti />
-            <h1>{isWinner} wins the game:)</h1>
+            <h1>{isWinner} has won the game:)</h1>
             <p><button className="playbuttons"onClick={handleReset}><box-icon name='plane-land' type='solid' flip='horizontal' color='#33ba0b' ></box-icon>Play Again<box-icon name='plane-land' type='solid' color='#33ba0b' ></box-icon></button></p>
         </>
     )}
