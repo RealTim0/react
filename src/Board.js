@@ -61,7 +61,7 @@ if(isWinner){
         <>
             <Confetti />
             <h1>{isWinner} wins the game:)</h1>
-            <h2><button onClick={handleReset}>Play Again</button></h2>
+            <p><button className="playbuttons"onClick={handleReset}>Play Again</button></p>
         </>
     )}
        
@@ -69,7 +69,7 @@ else if(isDraw){
     return(
         <>
             <h1>{drawMessage}</h1>
-            <button onClick={handleReset}>Play Again</button>
+            <p><button className="playbuttons"onClick={handleReset}>Play Again</button></p>
         </>
     )}
 

@@ -14,8 +14,19 @@
   justify-content: center;
   align-items: center;
   cursor:pointer;
-  transition: .5s;
-  animation: ease-in infinite ;
+}
+.squares:hover{
+  animation: rotate 10s infinite ;
+  background-image:radial-gradient(rgb(0, 255, 153), rgb(24, 201, 224));
+  color:black
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 body{
   background-image: linear-gradient(pink, blue);
@@ -44,4 +55,31 @@ button:hover{
   color:aquamarine;
   border:solid 2px black;
   cursor:pointer;
+}
+.playbuttons{
+  animation: dropdown 4s  ease-in-out ;
+}
+
+@keyframes dropdown {
+  0% {
+    transform: translateY(-400px);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  70% {
+    transform: rotate(15deg);
+  }
+  80% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
