@@ -16,7 +16,7 @@ export default function Board () {
             return;
         }
         const copyStateCharacter = [...character]
-        copyStateCharacter[index] = isTurn ? "❌" : "⭕"
+        copyStateCharacter[index] = isTurn ? "X" : "O"
         setCharacter(copyStateCharacter)
         setIsTurn(!isTurn)
         setIsCellClicked(true)
