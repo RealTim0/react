@@ -16,7 +16,7 @@ export default function Board () {
             return;
         }
         const copyStateCharacter = [...character]
-        copyStateCharacter[index] = isTurn ? "❌" : "⭕"
+        copyStateCharacter[index] = isTurn ? "X" : "O"
         setCharacter(copyStateCharacter)
         setIsTurn(!isTurn)
         setIsCellClicked(true)
@@ -75,8 +75,8 @@ else if(isDraw){
     return(
        <>
             <div className="board"></div>
-            <h1>TIC-TAC-TOE</h1>
-            <h3>Player: {isTurn ? "❌" : "⭕"} Make Your Move😎!</h3>
+            <h1 className="hea">TIC-TAC-TOE</h1>
+            <h3 className="head">Player: {isTurn ? "X" : "O"} Make Your Move😎!</h3>
 
             <div className="rows">
                     <Squares onClick={() => handleClick(0)} value={character[0]}/>
