@@ -24,6 +24,19 @@
    background-color: darkseagreen;
    box-shadow: 3px 3px 3px  rgba(104, 63, 9, 0.989);
    cursor:pointer;
+   animation-name: datal;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+}
+@keyframes datal {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg) scaleX(1.1);
+    }
+    
 }
 .squares:active{
     color: chocolate;
