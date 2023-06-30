@@ -47,3 +47,27 @@ function checkDraw() {
         return false
     }
 
+
+
+    function handleReset(){
+        setCharacter(Array(9).fill(""))
+        setIsCellClicked(false)
+    }
+
+   //conditional rendering 
+if(isWinner){
+    return( 
+        <>
+            <Confetti />
+            <h1>{isWinner} wins the game:)</h1>
+            <h2><button onClick={handleReset}>Play Again</button></h2>
+        </>
+    )}
+
+else if(isDraw){
+    return(
+        <>
+            <h1>{drawMessage}</h1>
+            <button onClick={handleReset}>Play Again</button>
+        </>
+    )}
