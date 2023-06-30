@@ -21,4 +21,29 @@ export default function Board () {
         setIsTurn(!isTurn)
         setIsCellClicked(true)
     }
+function checkDraw() {
+        return character.every((cell) => cell !== "");
+    }
+
+
+    function checkWinner() {
+        let winner = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [0, 4, 8],
+            [2, 4, 6],
+            [2, 5, 8]
+        ]
+
+        for (let logic of winner) {
+            const [a, b, c] = logic
+            if (character[a] !== "" && character[a] === character[b] && character[a] === character[c]) {
+                return character[a]
+            }
+        }
+        return false
+    }
 
