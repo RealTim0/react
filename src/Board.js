@@ -71,3 +71,30 @@ else if(isDraw){
             <button onClick={handleReset}>Play Again</button>
         </>
     )}
+    else{
+    return(
+       <>
+            <div className="board"></div>
+            <h1>TIC-TAC-TOE</h1>
+            <h3>Player: {isTurn ? "❌" : "⭕"} Make Your Move😎!</h3>
+
+            <div className="rows">
+                    <Squares onClick={() => handleClick(0)} value={character[0]}/>
+                    <Squares onClick={() => handleClick(1)} value={character[1]}/>
+                    <Squares onClick={() => handleClick(2)} value={character[2]}/>
+                </div>
+                <div className="rows">
+                    <Squares onClick={() => handleClick(3)} value={character[3]}/>
+                    <Squares onClick={() => handleClick(4)} value={character[4]}/>
+                    <Squares onClick={() => handleClick(5)} value={character[5]}/>
+                </div>
+                <div className="rows">
+                    <Squares onClick={() => handleClick(6)} value={character[6]}/>
+                    <Squares onClick={() => handleClick(7)} value={character[7]}/>
+                    <Squares onClick={() => handleClick(8)} value={character[8]}/>
+                </div>
+                {isCellClicked && <button onClick={handleReset}>Reset Game</button>}
+
+        </>
+    )}
+}
