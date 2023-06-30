@@ -60,15 +60,15 @@ if(isWinner){
         <>
             <Confetti />
             <h1>{isWinner} wins the game:)</h1>
-            <h2><button onClick={handleReset}>Play Again</button></h2>
+            <h2><button onClick={handleReset} className="play">Play Again</button></h2>
         </>
     )}
 
 else if(isDraw){
     return(
         <>
-            <h1>{drawMessage}</h1>
-            <button onClick={handleReset}>Play Again</button>
+            <h1 className="Draw">{drawMessage}</h1>
+            <button onClick={handleReset} className="play">Play Again</button>
         </>
     )}
     else{
@@ -76,7 +76,7 @@ else if(isDraw){
        <>
             <div className="board"></div>
             <h1 className="hea">TIC-TAC-TOE</h1>
-            <h3 className="head">Player: {isTurn ? "X" : "O"} Make Your Move😎!</h3>
+            <h3 className="head">Player:{isTurn ? "X" : "O"} Make Your Move😎!</h3>
 
             <div className="rows">
                     <Squares onClick={() => handleClick(0)} value={character[0]}/>
@@ -93,7 +93,7 @@ else if(isDraw){
                     <Squares onClick={() => handleClick(7)} value={character[7]}/>
                     <Squares onClick={() => handleClick(8)} value={character[8]}/>
                 </div>
-                {isCellClicked && <button onClick={handleReset}>Reset Game</button>}
+                {isCellClicked && <button onClick={handleReset} className="play">Reset Game</button>}
 
         </>
     )}
