@@ -16,7 +16,6 @@
   display:flex;
   justify-content: center;
   align-items: center;
- 
   transition: .5s;
   animation: ease-in infinite ;
 }
