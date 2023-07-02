@@ -24,8 +24,8 @@
   background-color: rgba(141, 145, 32, 0.543);
 }
 .squares:hover{
-   background-color: darkseagreen;
-   box-shadow: 3px 3px 3px  rgba(104, 63, 9, 0.989);
+   background-image:linear-gradient(pink,blue);
+   box-shadow: 0px 0px 3px  grey;
    cursor:pointer;
    animation-name: datal;
     animation-delay: 0;
@@ -41,10 +41,7 @@
     }
     
 }
-.squares:active{
-    color: chocolate;
-    box-shadow: inset 5px 5px 5px  rgb(0, 0, 0);
-}
+
 body{
   background-image: url(https://img.freepik.com/free-photo/white-painted-wall-texture-background_53876-138197.jpg?w=996&t=st=1688126451~exp=1688127051~hmac=e77559d5c64648f3647cd94b35c5b2ad9760b12f5c94b0c75ac7b9a92c35d55c);
   background-repeat: no-repeat;
@@ -70,18 +67,18 @@ body{
   font-weight: bolder;
 }
 button{
-  background-color: aquamarine;
+  background-color: greenyellow;
   color:black;
-  border:solid 2px aquamarine;
+  border:solid 2px greenyellow;
   font-size: 2rem;
   border-radius: 15px;
   margin-top: 10px;
   position:sticky;
 }
 button:hover{
-  background-color: rgba(98, 21, 21, 0.176);
-  color:rgb(120, 93, 11);
-  border:solid 2px rgba(215, 104, 104, 0.566);
+  background-color: black;
+  color:greenyellow;
+  border:solid 2px black;
   cursor:pointer;
 }
 .Draw{
@@ -109,8 +106,4 @@ button:hover{
   font-weight: bolder;
   display: flex;
   justify-content: center;
-  box-shadow: rgb(135, 157, 89) 4px 4px 4px;
-}
-.play:hover{
-  box-shadow: inset 5px 5px 5px  rgb(0, 0, 0);
 }
