@@ -76,7 +76,7 @@ if(isWinner){
 else if(isDraw){
     return(
         <>
-            <h1 className="Draw">{drawMessage}</h1>
+            <h1 className="Draw">{drawMessage} Lets 🤝🏿:</h1>
             <button onClick={handleReset} className="play">Play Again</button>
         </>
     )}
