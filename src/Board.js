@@ -68,7 +68,7 @@ if(isWinner){
         <>
             <Confetti />
             <h1>🎉{isWinner} has won the game🎉</h1>
-            <div className="windiv"><h3>Player {loserPlayer} you can:</h3> <button onClick={handleReset} className="play">Play Again</button></div>
+            <div className="windiv"><h3>Player {loserPlayer} you can always😉:</h3> <button onClick={handleReset} className="play">Play Again</button></div>
         </>
     )}
 
