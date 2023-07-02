@@ -106,4 +106,29 @@ button:hover{
   font-weight: bolder;
   display: flex;
   justify-content: center;
+ animation: dropAndDance 2s ease infinite;
+}
+
+@keyframes dropAndDance {
+  0% {
+    transform: translateY(-200px);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  70% {
+    transform: rotate(15deg);
+  }
+  80% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
