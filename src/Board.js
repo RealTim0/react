@@ -16,6 +16,7 @@ export default function Board () {
 
     function handleClick (index) {
         if (character[index] !== ""){
+            alert("Hey you! I've already been clicked!")
             return;
         }
        
@@ -68,7 +69,7 @@ if(isWinner){
         <>
             <Confetti />
             <h1>🎉{isWinner} has won the game🎉</h1>
-            <div className="windiv"><h3>Player {loserPlayer} you can always😉:</h3> <button onClick={handleReset} className="play">Play Again</button></div>
+            <span className="windiv"><h3>Player {loserPlayer} you can always😉:</h3> <button onClick={handleReset} className="play">Play Again</button></span>
         </>
     )}
 
