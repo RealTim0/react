@@ -7,19 +7,24 @@ export default function Board () {
     const [character, setCharacter] = React.useState(Array(9).fill(""))
     const[isTurn, setIsTurn] = React.useState(true)
     const [isCellClicked, setIsCellClicked] = React.useState(false)
+    const [loserPlayer, setLoserPlayer] = React.useState("")
     const isWinner = checkWinner();
     const isDraw = checkDraw();
     const drawMessage ="☘Ooops🌵 IT'S A DRAW"
+    
+        
 
     function handleClick (index) {
         if (character[index] !== ""){
             return;
         }
+       
         const copyStateCharacter = [...character]
         copyStateCharacter[index] = isTurn ? "X" : "O"
         setCharacter(copyStateCharacter)
         setIsTurn(!isTurn)
         setIsCellClicked(true)
+        setLoserPlayer(isTurn ? "⭕" : "❌")
     }
 function checkDraw() {
         return character.every((cell) => cell !== "");
@@ -27,6 +32,9 @@ function checkDraw() {
 
 
     function checkWinner() {
+
+       
+        
         let winner = [
             [0, 1, 2],
             [3, 4, 5],
@@ -44,7 +52,7 @@ function checkDraw() {
                 return character[a]
             }
         }
-        return false
+         return false
     }
 
 
@@ -59,8 +67,8 @@ if(isWinner){
     return( 
         <>
             <Confetti />
-            <h1>{isWinner} wins the game:)</h1>
-            <h2><button onClick={handleReset} className="play">Play Again</button></h2>
+            <h1>🎉{isWinner} has won the game🎉</h1>
+            <div className="windiv"><h3>Player {loserPlayer} you can:</h3> <button onClick={handleReset} className="play">Play Again</button></div>
         </>
     )}
 
