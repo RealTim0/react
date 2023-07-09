@@ -1,6 +1,8 @@
 import React from "react"
 import Squares from "./Squares"
 import Confetti from "react-confetti"
+import {Link} from "react-router-dom"
+
 
 
 export default function Board () {
@@ -69,24 +71,24 @@ if(isWinner){
         <>
             <Confetti />
             <h1>🎉{isWinner} has won the game🎉</h1>
-            <span className="windiv"><h3>Player {loserPlayer} you can always😉:</h3> <button onClick={handleReset} className="play">Play Again</button></span>
+            <span className="windiv"><h3>Player {loserPlayer} you can :</h3> <button onClick={handleReset} className="play">Play Again</button></span>
         </>
     )}
 
 else if(isDraw){
     return(
         <>
-            <h1 className="Draw">{drawMessage} Lets 🤝🏿:</h1>
+            <h1 className="Draw">{drawMessage} </h1>
             <button onClick={handleReset} className="play">Play Again</button>
         </>
     )}
     else{
     return(
        <>
-            <div className="board"></div>
-            <h1 className="hea">TIC-TAC-TOE</h1>
-            <h3 className="head">Player:{isTurn ? "X" : "O"} Make Your Move😎!</h3>
-
+            <div className="header">
+                <h1 >TIC-TAC-TOE</h1>
+                <h3 >Player:{isTurn ? "X" : "O"} Make Your Move😎!</h3>
+            </div>
             <div className="rows">
                     <Squares onClick={() => handleClick(0)} value={character[0]}/>
                     <Squares onClick={() => handleClick(1)} value={character[1]}/>
@@ -101,9 +103,14 @@ else if(isDraw){
                     <Squares onClick={() => handleClick(6)} value={character[6]}/>
                     <Squares onClick={() => handleClick(7)} value={character[7]}/>
                     <Squares onClick={() => handleClick(8)} value={character[8]}/>
+                    
                 </div>
+                <div className="boardbuttons">
                 {isCellClicked && <button onClick={handleReset} className="play">Reset Game</button>}
-
+                <button><Link to='/' className="link">
+   Back to home
+        </Link></button>
+            </div>
         </>
     )}
 }

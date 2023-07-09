@@ -1,0 +1,90 @@
+.home{
+    height:100vh;
+    background-image: url(https://img.freepik.com/free-photo/white-painted-wall-texture-background_53876-138197.jpg?w=996&t=st=1688126451~exp=1688127051~hmac=e77559d5c64648f3647cd94b35c5b2ad9760b12f5c94b0c75ac7b9a92c35d55c);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .homebutton{
+    padding:30px;
+    font-size: 3rem;
+    font-family: cursive;
+    text-align: center;
+    text-decoration: none;
+    position:relative;
+   top:50%;
+   left:0;
+   right:0;
+   color :black;
+    background-color: transparent;
+    box-shadow: 0 0 1.4px gray;
+    border: none;
+    animation: dance 4s linear infinite ;
+}
+
+@keyframes dance {
+    0% {
+        transform: translateX(100px) rotate(0deg);
+    }
+    25% {
+        transform: translateX(0) rotate(15deg);
+    }
+    50% {
+        transform: translateX(-100px) rotate(-15deg);
+    }
+    75% {
+        transform: translateX(0) rotate(15deg);
+    }
+    100% {
+        transform: translateX(100px) rotate(0deg);
+    }
+}
+  .homebutton :hover,:focus{
+    background-color: black;
+    color:greenyellow;
+  }
+  .link{
+    text-decoration: none;
+    color:black;
+  }
+  .homebutton :active{
+    color:orange;
+
+  }
+  .link :hover :focus{
+    color:greenyellow;
+    background-color: black;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,9 +6,7 @@
   align-content: center;
 
 }
-.windiv{
-  display: inline-block;
-}
+
 .squares{
   font-family:monospace;
   font-size: 70px;
@@ -30,12 +28,13 @@
    background-color: transparent;
    box-shadow: 0px 0px 3px  grey;
    cursor:pointer;
-   animation-name: datal;
-    animation-delay: 0;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
+   animation-name: squaresanimation;
+   animation-delay: 0;
+   animation-iteration-count: infinite;
+   animation-duration: 10s;
+   border-radius: 40px;
 }
-@keyframes datal {
+@keyframes squaresanimation {
     0%{
         transform: rotate(0deg);
     }
@@ -50,25 +49,10 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  display:flex;
-  justify-content: center;
-  align-items: center;
   overflow:hidden;
-}
-.board{
-  margin: 100px 0;
   text-align: center;
 }
-.head{
-  font-size: 30px;
-  font-weight: bolder;
-}
-.hea{
-  align-items: center;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bolder;
-}
+
 button{
   font-family:monospace;
   background-color: greenyellow;
@@ -79,36 +63,16 @@ button{
   margin-top: 10px;
   position:sticky;
 }
-button:hover{
-  background-color: black;
+button:hover {
+   background-color: black; 
   color:greenyellow;
   border:solid 2px black;
   cursor:pointer;
+  border-radius: 40px;
 }
-.Draw{
-  font-size: 70px;
-  font-weight: bolder;
-  display: flex;
-  flex-wrap: wrap;
-}
+
 .play{
-  align-items: center;
-  text-align: center;
-  font-weight: bolder;
-  display: flex;
-  justify-content: center;
-}
-.Draw{
-  font-size: 50px;
-  font-weight: bolder;
-  display: flex;
-  flex-wrap: wrap;
-}
-.play{
-  font-size: 30px;
-  font-weight: bolder;
-  display: flex;
-  justify-content: center;
+  margin-right: 5px;
  animation: dropAndDance 4s ease ;
 }
 
@@ -134,4 +98,27 @@ button:hover{
   100% {
     transform: rotate(0);
   }
+}
+
+ ul {
+  display:flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0 30px 0 30px;
+  margin: 10px 40px 0 30px;
+  font-size: 1.5rem;
+  height:fit-content;
+  width:80%;
+  background-color: transparent;
+  box-shadow: 0 0 15px black;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.link{
+  color:black;
+ 
+} 
+.link:hover{
+  color:greenyellow;
 }
